@@ -1,0 +1,42 @@
+:root{
+    --color1: red;
+  }
+  
+  .container{
+    background-color: #eee;
+    font-family: sans-serif;
+    width: 1000px;
+    margin: 30px auto;
+    
+    display: grid;
+    grid-template-rows: 100px 200px 400px 100px;
+    grid-template-columns: 180px repeat(3, 1fr);
+    
+    
+    grid-gap: 30px;
+    
+  }
+  /* Tout ce qui est dans la div container */
+  .container > *{
+    background-color: var(--color1);
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+  header{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+     
+  }
+  sidebar{
+    grid-column: 1 / 2;
+    grid-row: 2 / span 2;
+  }
+  .main-content{
+    grid-column: 2/ 5;
+  }
+  
+  footer{
+    grid-column: 1 / -1;
+  }
